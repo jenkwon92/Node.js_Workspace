@@ -1,0 +1,413 @@
+Microsoft Windows [Version 10.0.18363.1082]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\silve>d:
+
+D:\>cd D:\workspace\node_workspace\project1012
+
+D:\workspace\node_workspace\project1012>node global.js
+100만번 수행완료
+mycpu: 16.489ms
+
+D:\workspace\node_workspace\project1012>node global.js
+x64
+
+D:\workspace\node_workspace\project1012>node global.js
+x64
+{
+  ALLUSERSPROFILE: 'C:\\ProgramData',
+  APPDATA: 'C:\\Users\\silve\\AppData\\Roaming',
+  CommonProgramFiles: 'C:\\Program Files\\Common Files',
+  'CommonProgramFiles(x86)': 'C:\\Program Files (x86)\\Common Files',
+  CommonProgramW6432: 'C:\\Program Files\\Common Files',
+  COMPUTERNAME: 'YOUNG_JU',
+  ComSpec: 'C:\\WINDOWS\\system32\\cmd.exe',
+  C_IA32_REDIST12: 'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\',
+  DriverData: 'C:\\Windows\\System32\\Drivers\\DriverData',
+  FP_NO_HOST_CHECK: 'NO',
+  HOMEDRIVE: 'C:',
+  HOMEPATH: '\\Users\\silve',
+  LOCALAPPDATA: 'C:\\Users\\silve\\AppData\\Local',
+  LOGONSERVER: '\\\\YOUNG_JU',
+  NUMBER_OF_PROCESSORS: '4',
+  OneDrive: 'C:\\Users\\silve\\OneDrive',
+  OneDriveConsumer: 'C:\\Users\\silve\\OneDrive',
+  OS: 'Windows_NT',
+  Path: 'C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;;C:\\ProgramData\\Anaconda3;C:\\ProgramData\\Anaconda3\\Library\\mingw-w64\\bin;C:\\ProgramData\\Anaconda3\\Library\\usr\\bin;C:\\ProgramData\\Anaconda3\\Library\\bin;C:\\ProgramData\\Anaconda3\\Scripts;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\ia32\\compiler;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\nodejs\\;C:\\Users\\silve\\AppData\\Local\\Programs\\Python\\Python38-32\\Scripts\\;C:\\Users\\silve\\AppData\\Local\\Programs\\Python\\Python38-32\\;C:\\Users\\silve\\AppData\\Local\\Microsoft\\WindowsApps;;C:\\Users\\silve\\AppData\\Local\\JetBrains\\PyCharm Community Edition 2020.2\\bin;;C:\\Users\\silve\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\silve\\AppData\\Roaming\\npm;C:\\Program Files (x86)\\ESTsoft\\ALSee\\x64',
+  PATHEXT: '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  PROCESSOR_ARCHITECTURE: 'AMD64',
+  PROCESSOR_IDENTIFIER: 'Intel64 Family 6 Model 58 Stepping 9, GenuineIntel',
+  PROCESSOR_LEVEL: '6',
+  PROCESSOR_REVISION: '3a09',
+  ProgramData: 'C:\\ProgramData',
+  ProgramFiles: 'C:\\Program Files',
+  'ProgramFiles(x86)': 'C:\\Program Files (x86)',
+  ProgramW6432: 'C:\\Program Files',
+  PROMPT: '$P$G',
+  PSModulePath: 'C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\',
+  PUBLIC: 'C:\\Users\\Public',
+  'PyCharm Community Edition': 'C:\\Users\\silve\\AppData\\Local\\JetBrains\\PyCharm Community Edition 2020.2\\bin;',
+  SESSIONNAME: 'Console',
+  SystemDrive: 'C:',
+  SystemRoot: 'C:\\WINDOWS',
+  TEMP: 'C:\\Users\\silve\\AppData\\Local\\Temp',
+  TMP: 'C:\\Users\\silve\\AppData\\Local\\Temp',
+  TMPDIR: 'C:\\Users\\Public\\Documents\\ESTsoft\\CreatorTemp',
+  USERDOMAIN: 'YOUNG_JU',
+  USERDOMAIN_ROAMINGPROFILE: 'YOUNG_JU',
+  USERNAME: 'silve',
+  USERPROFILE: 'C:\\Users\\silve',
+  windir: 'C:\\WINDOWS'
+}
+
+D:\workspace\node_workspace\project1012>node global.js
+x64
+win32
+
+D:\workspace\node_workspace\project1012>node module.js
+D:\workspace\node_workspace\project1012\module.js:15
+console.log(os.hostname());
+            ^
+
+ReferenceError: os is not defined
+    at Object.<anonymous> (D:\workspace\node_workspace\project1012\module.js:15:13)
+[90m    at Module._compile (internal/modules/cjs/loader.js:1015:30)[39m
+[90m    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)[39m
+[90m    at Module.load (internal/modules/cjs/loader.js:879:32)[39m
+[90m    at Function.Module._load (internal/modules/cjs/loader.js:724:14)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)[39m
+[90m    at internal/main/run_main_module.js:17:47[39m
+
+D:\workspace\node_workspace\project1012>node module.js
+D:\workspace\node_workspace\project1012\module.js:15
+console.log(OS.hostname());
+            ^
+
+ReferenceError: OS is not defined
+    at Object.<anonymous> (D:\workspace\node_workspace\project1012\module.js:15:13)
+[90m    at Module._compile (internal/modules/cjs/loader.js:1015:30)[39m
+[90m    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)[39m
+[90m    at Module.load (internal/modules/cjs/loader.js:879:32)[39m
+[90m    at Function.Module._load (internal/modules/cjs/loader.js:724:14)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)[39m
+[90m    at internal/main/run_main_module.js:17:47[39m
+
+D:\workspace\node_workspace\project1012>node module.js
+young_ju
+
+D:\workspace\node_workspace\project1012>node module.js
+young_ju
+[
+  {
+    model: 'Intel(R) Core(TM) i3-3220T CPU @ 2.80GHz',
+    speed: 2794,
+    times: {
+      user: 4685265,
+      nice: 0,
+      sys: 4169250,
+      idle: 35436265,
+      irq: 352625
+    }
+  },
+  {
+    model: 'Intel(R) Core(TM) i3-3220T CPU @ 2.80GHz',
+    speed: 2794,
+    times: {
+      user: 4994781,
+      nice: 0,
+      sys: 3601328,
+      idle: 35694296,
+      irq: 55421
+    }
+  },
+  {
+    model: 'Intel(R) Core(TM) i3-3220T CPU @ 2.80GHz',
+    speed: 2794,
+    times: {
+      user: 5674625,
+      nice: 0,
+      sys: 4590984,
+      idle: 34024796,
+      irq: 35453
+    }
+  },
+  {
+    model: 'Intel(R) Core(TM) i3-3220T CPU @ 2.80GHz',
+    speed: 2794,
+    times: {
+      user: 5693031,
+      nice: 0,
+      sys: 4848875,
+      idle: 33748484,
+      irq: 28140
+    }
+  }
+]
+
+D:\workspace\node_workspace\project1012>node module.js
+
+D:\workspace\node_workspace\project1012>node module.js
+Url {
+  protocol: 'https:',
+  slashes: true,
+  auth: null,
+  host: 'terms.naver.com',
+  port: null,
+  hostname: 'terms.naver.com',
+  hash: null,
+  search: '?query=car',
+  query: 'query=car',
+  pathname: '/search.nhn',
+  path: '/search.nhn?query=car',
+  href: 'https://terms.naver.com/search.nhn?query=car'
+}
+
+D:\workspace\node_workspace\project1012>node module.js
+검색어는 query=car
+
+D:\workspace\node_workspace\project1012>node module.js
+파일을 모두 읽기 완료했어요!!
+
+D:\workspace\node_workspace\project1012>node module.js
+파일을 모두 읽기 완료했어요!!
+<Buffer 6a 61 76 61 20 70 72 6f 67 72 61 6d 6d 65 72 0d 0a 6f 72 61 63 6c 65 20 61 64 6d 69 6e 69 73 74 72 61 74 6f 72 0d 0a 66 72 6f 6e 74 20 64 65 76 65 6c ... 4 more bytes>
+
+D:\workspace\node_workspace\project1012>node module.js
+파일을 모두 읽기 완료했어요!!
+java programmer
+oracle administrator
+front developer
+
+D:\workspace\node_workspace\project1012>node server.js
+internal/modules/cjs/loader.js:834
+  throw err;
+  ^
+
+Error: Cannot find module 'D:\workspace\node_workspace\project1012\server.js'
+[90m    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)[39m
+[90m    at Function.Module._load (internal/modules/cjs/loader.js:687:27)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)[39m
+[90m    at internal/main/run_main_module.js:17:47[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: []
+}
+
+D:\workspace\node_workspace\project1012>node server.js
+internal/modules/cjs/loader.js:834
+  throw err;
+  ^
+
+Error: Cannot find module 'D:\workspace\node_workspace\project1012\server.js'
+[90m    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)[39m
+[90m    at Function.Module._load (internal/modules/cjs/loader.js:687:27)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)[39m
+[90m    at internal/main/run_main_module.js:17:47[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: []
+}
+
+D:\workspace\node_workspace\project1012>node server.js
+My Server is running at 8989
+^C
+D:\workspace\node_workspace\project1012>node server.js
+My Server is running at 8989....
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+접속자 발견!
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 777 port...
+접속자 감지
+접속자 감지
+접속자 감지
+접속자 감지
+접속자 감지
+접속자 감지
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+접속자 감지
+접속자 감지
+클라이언트의 요청을 받았습니다.
+접속자 감지
+클라이언트의 요청을 받았습니다.
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+_http_outgoing.js:510
+    throw new ERR_INVALID_HTTP_TOKEN('Header name', name);
+    ^
+
+TypeError [ERR_INVALID_HTTP_TOKEN]: Header name must be a valid HTTP token ["Content=Type"]
+    at processHeader (_http_outgoing.js:457:5)
+    at ServerResponse._storeHeader (_http_outgoing.js:367:11)
+    at ServerResponse.writeHead (_http_server.js:312:8)
+    at Server.<anonymous> (D:\workspace\node_workspace\project1012\server2.js:17:12)
+    at Server.emit (events.js:314:20)
+    at parserOnIncoming (_http_server.js:779:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:122:17) {
+  code: 'ERR_INVALID_HTTP_TOKEN'
+}
+
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.
+^C
+D:\workspace\node_workspace\project1012>node server2.js
+Server is running at 7777 port...
+클라이언트의 요청을 받았습니다.
+클라이언트의 요청을 받았습니다.

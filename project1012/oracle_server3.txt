@@ -1,0 +1,115 @@
+Microsoft Windows [Version 10.0.18363.1082]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\silve>d:
+
+D:\>cd D:\workspace\node_workspace\project1012
+
+D:\workspace\node_workspace\project1012>node server3.js
+internal/modules/cjs/loader.js:834
+  throw err;
+  ^
+
+Error: Cannot find module 'oracledb'
+Require stack:
+- D:\workspace\node_workspace\project1012\server3.js
+[90m    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)[39m
+[90m    at Function.Module._load (internal/modules/cjs/loader.js:687:27)[39m
+[90m    at Module.require (internal/modules/cjs/loader.js:903:19)[39m
+[90m    at require (internal/modules/cjs/helpers.js:74:18)[39m
+    at Object.<anonymous> (D:\workspace\node_workspace\project1012\server3.js:14:16)
+[90m    at Module._compile (internal/modules/cjs/loader.js:1015:30)[39m
+[90m    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1035:10)[39m
+[90m    at Module.load (internal/modules/cjs/loader.js:879:32)[39m
+[90m    at Function.Module._load (internal/modules/cjs/loader.js:724:14)[39m
+[90m    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: [ [32m'D:\\workspace\\node_workspace\\project1012\\server3.js'[39m ]
+}
+
+D:\workspace\node_workspace\project1012>npm install oracledb
+
+> oracledb@5.0.0 install D:\workspace\node_workspace\project1012\node_modules\oracledb
+> node package/install.js
+
+oracledb ********************************************************************************
+oracledb ** Node-oracledb 5.0.0 installed for Node.js 12.19.0 (win32, x64)
+oracledb **
+oracledb ** To use node-oracledb:
+oracledb ** - Oracle Client libraries (64-bit) must be available.
+oracledb ** - Follow the installation instructions:
+oracledb **   https://oracle.github.io/node-oracledb/INSTALL.html#windowsinstallation
+oracledb ********************************************************************************
+
+npm WARN saveError ENOENT: no such file or directory, open 'D:\workspace\node_workspace\project1012\package.json'
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN enoent ENOENT: no such file or directory, open 'D:\workspace\node_workspace\project1012\package.json'
+npm WARN project1012 No description
+npm WARN project1012 No repository field.
+npm WARN project1012 No README data
+npm WARN project1012 No license field.
+
++ oracledb@5.0.0
+added 1 package and audited 1 package in 1.874s
+found 0 vulnerabilities
+
+
+D:\workspace\node_workspace\project1012>dir
+ D 드라이브의 볼륨: 가족공용
+ 볼륨 일련 번호: BA96-FB87
+
+ D:\workspace\node_workspace\project1012 디렉터리
+
+2020-10-12  오후 03:29    <DIR>          .
+2020-10-12  오후 03:29    <DIR>          ..
+2020-10-12  오전 10:13               697 1012_node.txt
+2017-10-27  오전 07:26             4,799 canada.jpg
+2020-10-12  오전 11:17    <DIR>          data
+2020-10-12  오전 10:43               879 global.js
+2020-10-12  오전 11:27             1,844 module.js
+2020-10-12  오후 03:29    <DIR>          node_modules
+2020-10-12  오후 03:29               317 package-lock.json
+2020-10-12  오전 11:46               499 server.js
+2020-10-12  오후 03:26             2,882 server2.js
+2020-10-12  오후 03:28               652 server3.js
+2020-10-12  오전 10:16               378 test.js
+2020-10-08  오후 05:19             3,415 회원폼유효성체크_해설.html
+              10개 파일              16,362 바이트
+               4개 디렉터리  900,966,100,992 바이트 남음
+
+D:\workspace\node_workspace\project1012>node server3.js
+
+D:\workspace\node_workspace\project1012>node server3.js
+(node:42432) UnhandledPromiseRejectionWarning: ReferenceError: error is not defined
+    at D:\workspace\node_workspace\project1012\server3.js:18:3
+    at D:\workspace\node_workspace\project1012\node_modules\oracledb\lib\util.js:182:7
+(node:42432) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:42432) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+
+D:\workspace\node_workspace\project1012>node server3.js
+접속성공
+
+D:\workspace\node_workspace\project1012>node server3.js
+접속성공
+insert할꺼임
+
+D:\workspace\node_workspace\project1012>ed
+'ed'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+D:\workspace\node_workspace\project1012>node server3.js
+접속성공
+insert할꺼임
+입력성공
+
+D:\workspace\node_workspace\project1012>node server3.js
+접속성공
+insert할꺼임
+입력성공
+
+D:\workspace\node_workspace\project1012>node server3.js
+접속성공
+insert할꺼임
+입력성공
+
+D:\workspace\node_workspace\project1012>

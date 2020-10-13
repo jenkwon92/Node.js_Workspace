@@ -1,0 +1,17 @@
+{
+  "name": "project1012",
+  "version": "1.0.0",
+  "description": "",
+  "main": "global.js",
+  "dependencies": {
+    "finalhandler": "^1.1.2",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

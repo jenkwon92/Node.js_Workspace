@@ -1,0 +1,319 @@
+Enter password: ********
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.2.34-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use node
+Database changed
+MariaDB [node]> show tables;
++----------------+
+| Tables_in_node |
++----------------+
+| hcalss         |
+| hclass         |
+| member         |
++----------------+
+3 rows in set (0.00 sec)
+
+MariaDB [node]> drop table hcalss;
+Query OK, 0 rows affected (0.03 sec)
+
+MariaDB [node]> commit;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [node]> show tables;
++----------------+
+| Tables_in_node |
++----------------+
+| hclass         |
+| member         |
++----------------+
+2 rows in set (0.00 sec)
+
+MariaDB [node]> select * from hclass where id='admin' and pass='1234';
++-----------+-------+------+
+| hclass_id | id    | pass |
++-----------+-------+------+
+|         1 | admin | 1234 |
++-----------+-------+------+
+1 row in set (0.01 sec)
+
+MariaDB [node]> create  table  member2(
+    ->  member2_id  int primary key  auto_increment
+    ->  , uid  varchar(20)
+    ->  , password varchar(20)
+    ->  , uname varchar(20)
+    ->  , phone varchar(13)
+    ->  , email varchar(50)
+    ->  , addr varchar(100)
+    ->  , memo text
+    -> ) default character set utf8;
+Query OK, 0 rows affected (0.02 sec)
+
+MariaDB [node]> desc member2;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| member2_id | int(11)      | NO   | PRI | NULL    | auto_increment |
+| uid        | varchar(20)  | YES  |     | NULL    |                |
+| password   | varchar(20)  | YES  |     | NULL    |                |
+| uname      | varchar(20)  | YES  |     | NULL    |                |
+| phone      | varchar(13)  | YES  |     | NULL    |                |
+| email      | varchar(50)  | YES  |     | NULL    |                |
+| addr       | varchar(100) | YES  |     | NULL    |                |
+| memo       | text         | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+8 rows in set (0.02 sec)
+
+MariaDB [node]> drop table member2;
+Query OK, 0 rows affected (0.01 sec)
+
+MariaDB [node]> create  table  member2(
+    ->  member2_id  int primary key  auto_increment
+    ->  , uid  varchar(20)
+    ->  , password varchar(20)
+    ->  , uname varchar(20)
+    ->  , phone varchar(13)
+    ->  , email varchar(50)
+    ->  , receive varchar(3)
+    ->  , addr varchar(100)
+    ->  , memo text
+    -> ) default character set utf8;
+Query OK, 0 rows affected (0.02 sec)
+
+MariaDB [node]> select * from member2'
+    '> ;
+    '> ^C
+C:\Program Files\MariaDB 10.2\bin>mysql -u root -p
+Enter password: ********
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 21
+Server version: 10.2.34-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> select * from member2;
+ERROR 1046 (3D000): No database selected
+MariaDB [(none)]> use node;
+Database changed
+MariaDB [node]> select * from member2;
+Empty set (0.01 sec)
+
+MariaDB [node]> create  table  member2(
+    ->  member2_id  int primary key  auto_increment
+    ->  , uid  varchar(20)
+    ->  , password varchar(20)
+    ->  , uname varchar(20)
+    ->  , phone varchar(13)
+    ->  , email varchar(50)
+    ->  , receive varchar(3)
+    ->  , addr varchar(100)
+    ->  , memo text
+    -> ) default character set utf8;
+ERROR 1050 (42S01): Table 'member2' already exists
+MariaDB [node]> drop table member2;
+Query OK, 0 rows affected (0.01 sec)
+
+MariaDB [node]> create  table  member2(
+    ->  member2_id  int primary key  auto_increment
+    ->  , uid  varchar(20)
+    ->  , password varchar(20)
+    ->  , uname varchar(20)
+    ->  , phone varchar(13)
+    ->  , email varchar(50)
+    ->  , receive varchar(3)
+    ->  , addr varchar(100)
+    ->  , memo text
+    -> ) default character set utf8;
+Query OK, 0 rows affected (0.03 sec)
+
+MariaDB [node]> commit;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [node]> select * from member2;
+Empty set (0.01 sec)
+
+MariaDB [node]> show tables;
++----------------+
+| Tables_in_node |
++----------------+
+| hclass         |
+| member         |
+| member2        |
++----------------+
+3 rows in set (0.00 sec)
+
+MariaDB [node]> desc member2;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| member2_id | int(11)      | NO   | PRI | NULL    | auto_increment |
+| uid        | varchar(20)  | YES  |     | NULL    |                |
+| password   | varchar(20)  | YES  |     | NULL    |                |
+| uname      | varchar(20)  | YES  |     | NULL    |                |
+| phone      | varchar(13)  | YES  |     | NULL    |                |
+| email      | varchar(50)  | YES  |     | NULL    |                |
+| receive    | varchar(3)   | YES  |     | NULL    |                |
+| addr       | varchar(100) | YES  |     | NULL    |                |
+| memo       | text         | YES  |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+9 rows in set (0.01 sec)
+
+MariaDB [node]> CREATE TABLE skill(
+    -> skill_id int primary key auto_increment
+    -> , name varchar(20)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+MariaDB [node]> show tables;
++----------------+
+| Tables_in_node |
++----------------+
+| hclass         |
+| member         |
+| member2        |
+| skill          |
++----------------+
+4 rows in set (0.00 sec)
+
+MariaDB [node]> commit;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [node]> CREATE TABLE member_skill(
+    -> member_skill_id INT PRIMARY KEY AUTO_INCREMENT
+    -> ,member2_id INT
+    -> ,skill_id INT
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+MariaDB [node]> drop table member_skill;
+Query OK, 0 rows affected (0.01 sec)
+
+MariaDB [node]> CREATE TABLE member_skill(
+    -> member_skill_id INT PRIMARY KEY AUTO_INCREMENT
+    -> ,member2_id INT FOREIGN KEY REFERENCES member2(member2_id)
+    -> ,skill_id INT FOREIGN KEY REFERENCES skill(skill_id)
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'FOREIGN KEY REFERENCES member2(member2_id)
+,skill_id INT FOREIGN KEY REFERENC...' at line 3
+MariaDB [node]> desc skill;
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| skill_id | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name     | varchar(20) | YES  |     | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+2 rows in set (0.02 sec)
+
+MariaDB [node]> create table  member_skill(
+    ->   member_skill_id  int  primary key auto_increment
+    -> , member2_id int
+    -> , skill_id int
+    -> , foreign key (member2_id) references member2(member2_id)
+    -> , foreign key (skill_id) references skill(skill_id)
+    -> );
+Query OK, 0 rows affected (0.03 sec)
+
+MariaDB [node]> commit;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [node]> desc member_skill;
++-----------------+---------+------+-----+---------+----------------+
+| Field           | Type    | Null | Key | Default | Extra          |
++-----------------+---------+------+-----+---------+----------------+
+| member_skill_id | int(11) | NO   | PRI | NULL    | auto_increment |
+| member2_id      | int(11) | YES  | MUL | NULL    |                |
+| skill_id        | int(11) | YES  | MUL | NULL    |                |
++-----------------+---------+------+-----+---------+----------------+
+3 rows in set (0.02 sec)
+
+MariaDB [node]> insert into skill(name) values('java');
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [node]> insert into skill(name) values('oracle');
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [node]> insert into skill(name) values('android');
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [node]> insert into skill(name) values('python');
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [node]> insert into skill(name) values('swift');
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [node]> insert into skill(name) values('R');
+Query OK, 1 row affected (0.00 sec)
+
+MariaDB [node]> select * from skill;
++----------+---------+
+| skill_id | name    |
++----------+---------+
+|        1 | java    |
+|        2 | oracle  |
+|        3 | android |
+|        4 | python  |
+|        5 | swift   |
+|        6 | R       |
++----------+---------+
+6 rows in set (0.00 sec)
+
+MariaDB [node]> commit;
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [node]> select * from member2;
++------------+-------+----------+--------+------------+-------+---------+------+----------------+
+| member2_id | uid   | password | uname  | phone      | email | receive | addr | memo           |
++------------+-------+----------+--------+------------+-------+---------+------+----------------+
+|          1 | scott | 1234     | 민진호 | 7785121818 | NULL  | no      | 강남 | <p>hello</p>
+ |
++------------+-------+----------+--------+------------+-------+---------+------+----------------+
+1 row in set (0.00 sec)
+
+MariaDB [node]> select* from member_skill
+    -> ;
+Empty set (0.00 sec)
+
+MariaDB [node]> select * from member2;
++------------+-------+----------+--------+------------+-------+---------+------+----------------+
+| member2_id | uid   | password | uname  | phone      | email | receive | addr | memo           |
++------------+-------+----------+--------+------------+-------+---------+------+----------------+
+|          1 | scott | 1234     | 민진호 | 7785121818 | NULL  | no      | 강남 | <p>hello</p>
+ |
+|          2 | scott | 1234     | 민진호 | 7785121818 | NULL  | no      | 강남 | <p>hi</p>
+    |
+|          3 | scott | 1234     | 민진호 | 7785121818 | NULL  | no      | 강남 | <p>hi</p>
+    |
+|          4 | scott | 1234     | 민진호 | 7785121818 | NULL  | no      | 강남 | <p>hi</p>
+    |
+|          5 | scott | 1234     | 민진호 | 7785121818 | NULL  | no      | 강남 | <p>hi</p>
+    |
++------------+-------+----------+--------+------------+-------+---------+------+----------------+
+5 rows in set (0.00 sec)
+
+MariaDB [node]> select * from member2;
++------------+-------+----------+--------+------------+-------+---------+------+----------------+
+| member2_id | uid   | password | uname  | phone      | email | receive | addr | memo           |
++------------+-------+----------+--------+------------+-------+---------+------+----------------+
+|          1 | scott | 1234     | 민진호 | 7785121818 | NULL  | no      | 강남 | <p>hello</p>
+ |
+|          2 | scott | 1234     | 민진호 | 7785121818 | NULL  | no      | 강남 | <p>hi</p>
+    |
+|          3 | scott | 1234     | 민진호 | 7785121818 | NULL  | no      | 강남 | <p>hi</p>
+    |
+|          4 | scott | 1234     | 민진호 | 7785121818 | NULL  | no      | 강남 | <p>hi</p>
+    |
+|          5 | scott | 1234     | 민진호 | 7785121818 | NULL  | no      | 강남 | <p>hi</p>
+    |
+|          6 | jen   | 1234     | 권용은 | 7785121818 | NULL  | no      | 강남 | <p>hello</p>
+ |
++------------+-------+----------+--------+------------+-------+---------+------+----------------+
+6 rows in set (0.00 sec)
+
+MariaDB [node]>

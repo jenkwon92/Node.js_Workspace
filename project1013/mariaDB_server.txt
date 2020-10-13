@@ -1,0 +1,53 @@
+Enter password: ********
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 9
+Server version: 10.2.34-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use mysql
+Database changed
+MariaDB [mysql]> use node
+Database changed
+MariaDB [node]> select * from member;
++-----------+-----------+----------+-----------+-------+---------------------+
+| member_id | firstname | lastname | local     | msg   | regdate             |
++-----------+-----------+----------+-----------+-------+---------------------+
+|         1 | jen       | kwon     | vancouver | hi    | 2020-10-12 20:59:57 |
+|         2 | tiger     | king     | korea     | seoul | 2020-10-12 21:03:19 |
++-----------+-----------+----------+-----------+-------+---------------------+
+2 rows in set (0.02 sec)
+
+MariaDB [node]> CREATE TABLE hcalss(
+    -> hclass_id int primary key auto_increment
+    -> , id varchar(20)
+    -> , pass varchar(20)
+    -> ) default character set utf8;
+Query OK, 0 rows affected (0.02 sec)
+
+MariaDB [node]> INSERT INTO hclass(id,pass) VALUES ('admin','1234');
+ERROR 1146 (42S02): Table 'node.hclass' doesn't exist
+MariaDB [node]> INSERT INTO hcalss(id,pass) VALUES ('admin','1234');
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [node]> create table hclass(
+    -> hclass_id int primary key auto_increment
+    -> , id varchar(20)
+    -> , pass varchar(20)
+    -> ) default character set utf8;
+Query OK, 0 rows affected (0.02 sec)
+
+MariaDB [node]> INSERT INTO hclass(id,pass) VALUES ('admin','1234');
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [node]> select * from hclass;
++-----------+-------+------+
+| hclass_id | id    | pass |
++-----------+-------+------+
+|         1 | admin | 1234 |
++-----------+-------+------+
+1 row in set (0.00 sec)
+
+MariaDB [node]>
